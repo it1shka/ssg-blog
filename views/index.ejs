@@ -1,0 +1,10 @@
+<%- include('_header.ejs') -%> 
+
+<h2 class="list-title">Мои записи:</h2>
+<ul class="posts-list">
+  <% for(const {href, title} of posts) { %>
+  <li><a href="<%= href %>"><%= title %></a></li>
+  <% } %> 
+</ul>
+
+<%- include('_footer.ejs') -%>

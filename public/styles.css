@@ -1,0 +1,123 @@
+:root {
+  box-sizing: border-box;
+  --primary: #bf360c;
+  --light: #f9683a;
+  --dark: #870000;
+  --text-light: rgb(243, 243, 243);
+  --text-dark: rgb(49, 49, 49);
+  --shadow-props: 0px 4px 12px;
+}
+
+::before, ::after, * {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: calc(1em + 0.25vw);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: 0.25em 2em;
+  box-shadow: var(--dark) var(--shadow-props);
+}
+
+.page-header h1 {
+  margin: 0.25em;
+}
+
+.page-header a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s all 0s;
+}
+
+.page-header a:hover {
+  color: var(--light);
+}
+
+.container {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-footer {
+  margin-top: auto;
+  background-color: var(--dark);
+  color: var(--text-light);
+  padding: 0.2em 1em;
+  display: flex;
+  align-items: center;
+}
+
+.page-footer > * + * {
+  margin-left: 1em;
+}
+
+.page-footer a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.list-title {
+  color: grey;
+  font-weight: lighter;
+  border-bottom: 0.5px solid grey;
+}
+
+.posts-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.posts-list a {
+  display: inline-block;
+  min-width: 300px;
+  text-decoration: none;
+  color: rgb(80, 80, 80);
+  padding: 0.25em 0.5em;
+  transition: 0.25s padding-left ease-in 0s;
+}
+
+.posts-list a:hover {
+  padding-left: 1em;
+  color: var(--dark);
+  text-decoration: underline;
+}
+
+.posts-list > * + * {
+  margin-top: 0.2em;
+}
+
+/* POST */
+
+.article {
+  color: var(--text-dark);
+  box-shadow: rgb(199, 199, 199) var(--shadow-props);
+  padding: 0.5em 1em;
+}
+
+.article h1, h2, h3 {
+  font-weight: normal;
+}
+
+.article img {
+  border-radius: 0.5em;
+  max-width: 460px;
+  margin: 1em 0em;
+}
+
+.article blockquote {
+  border-left: 10px solid grey;
+  padding: 0.1em 2em;
+  margin: 0;
+}

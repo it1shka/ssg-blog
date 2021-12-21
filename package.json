@@ -1,0 +1,22 @@
+{
+  "name": "ssg-blog",
+  "version": "1.0.0",
+  "description": "small blog",
+  "main": "index.js",
+  "scripts": {
+    "build": "node src/build.js",
+    "serve": "node src/server.js",
+    "start": "npm run build && npm run serve",
+    "dev": "nodemon --watch markdown --watch src --watch views --exec npm run start"
+  },
+  "author": "it1shka",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "marked": "^4.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
